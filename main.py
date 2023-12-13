@@ -1,7 +1,8 @@
-from src import *
+from utilities import csv_verifier
+from Controllers import create_entry,read_all_records
 
 def main():
-    verify_csv('passwords.csv')
+    csv_verifier.verify_csv('passwords.csv')
     while True:
         choice = input('What do you want to do?\n[1]Read all records\n[2]Create a new entry\n[0]Exit\n')
         if choice == '1':
@@ -12,5 +13,5 @@ def main():
             break
         else:
             print('Invalid option')
-
+            
 main()
