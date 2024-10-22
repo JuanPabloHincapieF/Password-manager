@@ -1,3 +1,5 @@
-import os 
+from cryptography.fernet import Fernet
 
-print(type(os.path.dirname(os.getcwd())))
+# Genera la clave una sola vez y guárdala para usarla en todo el proceso
+key = Fernet.generate_key()
+print(key)
